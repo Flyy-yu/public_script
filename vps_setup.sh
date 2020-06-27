@@ -59,6 +59,7 @@ make
 
 cd ~/tools/
 git clone https://github.com/s0md3v/Arjun
+wget https://raw.githubusercontent.com/gwen001/github-search/master/github-subdomains.py
 
 git clone https://github.com/nahamsec/recon_profile.git
 
