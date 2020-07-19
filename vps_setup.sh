@@ -57,6 +57,10 @@ git clone https://github.com/blechschmidt/massdns.git
 cd massdns
 make
 
+#cors header fuzzer
+cd ~/tools/
+git clone https://github.com/lc/theftfuzzer.git
+
 cd ~/tools/
 git clone https://github.com/s0md3v/Arjun
 wget https://raw.githubusercontent.com/gwen001/github-search/master/github-subdomains.py
