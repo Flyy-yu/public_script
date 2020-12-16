@@ -9,7 +9,7 @@ if [ "$1" != "" ]; then
 	rm cert
 
 	#Download frida-server, push to the device
-	wget https://github.com/frida/frida/releases/download/12.8.13/frida-server-12.8.13-android-arm64.xz
+	wget https://github.com/frida/frida/releases/download/14.1.3/frida-server-14.1.3-android-arm64.xz
 	unxz frida-server-12.8.13-android-arm64.xz
 	adb push frida-server-12.8.13-android-arm64 /sdcard/frida-server-12.8.13-android-arm64
 	adb shell 'su -c mv /sdcard/frida-server-12.8.13-android-arm64 /data/local/tmp/frida-server-12.8.13-android-arm64'
