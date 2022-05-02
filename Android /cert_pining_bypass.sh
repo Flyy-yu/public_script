@@ -9,15 +9,15 @@ if [ "$1" != "" ]; then
 	rm cert
 
 	#Download frida-server, push to the device
-	wget https://github.com/frida/frida/releases/download/14.1.3/frida-server-14.1.3-android-arm64.xz
-	unxz frida-server-14.1.3-android-arm64.xz
-	adb push frida-server-14.1.3-android-arm64 /sdcard/frida-server-14.1.3-android-arm64
-	adb shell 'su -c mv /sdcard/frida-server-14.1.3-android-arm64 /data/local/tmp/frida-server-14.1.3-android-arm64'
-	adb shell 'su -c chmod +x /data/local/tmp/frida-server-14.1.3-android-arm64'
+	wget https://github.com/frida/frida/releases/download/15.1.7/frida-server-15.1.7-android-arm64.xz
+	unxz frida-server-15.1.7-android-arm64.xz
+	adb push frida-server-15.1.7-android-arm64 /sdcard/frida-server-15.1.7-android-arm64
+	adb shell 'su -c mv /sdcard/frida-server-15.1.7-android-arm64 /data/local/tmp/frida-server-15.1.7-android-arm64'
+	adb shell 'su -c chmod +x /data/local/tmp/frida-server-15.1.7-android-arm64'
 
-	rm frida-server-14.1.3-android-arm64*
+	rm frida-server-15.1.7-android-arm64*
 
-	adb shell 'su -c /data/local/tmp/frida-server-14.1.3-android-arm64 &' || echo 'frida server already running'
+	adb shell 'su -c /data/local/tmp/frida-server-15.1.7-android-arm64 &' || echo 'frida server already running'
 
 	#bypass cert pining with frida
 	frida --codeshare pcipolloni/universal-android-ssl-pinning-bypass-with-frida -U -f $1 --no-pause
